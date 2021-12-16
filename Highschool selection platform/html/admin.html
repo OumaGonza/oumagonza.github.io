@@ -1,0 +1,43 @@
+<?php
+$mysqli = new mysqli('localhost','root','mypass123','crud') or die(mysqli_error($mysqli));//to connect to the database
+
+$result = $mysqli->query("SELECT * FROM data") or die(mysqli->error);//fetch all records from the database
+?>
+
+<div class="row justify-content-center">
+    <table>
+        <thead>
+            <tr>
+                <th>Index number</th>
+                <th>Name</th>
+                <th>Sex</th>
+                <th>Date of birth</th>
+                <th>Primary School</th>
+            </tr>
+        </thead>
+        <?php
+        while($row = $result->fetch_assoc()):?>    <!--notice the use of a colon-->
+        <tr>
+            <td><?php echo $row['index']; ?></td>
+            <td><?php echo $row['nam']; ?></td>
+            <td><?php echo $row['sex']; ?></td>
+            <td><?php echo $row['dob']; ?></td>
+            <td><?php echo $row['school']; ?></td>
+        </tr>
+        <?php endwhile;>
+    </table>
+</div>
+
+//pre_r($result);//returns database data
+
+pre_r($result->fetch_assoc());//returns contents of a database,one after the other
+
+//fetch data about database in an array
+function pre_r($array){
+    echo '<pre>';
+    print_r($array);
+    echo '</pre>';
+}
+
+
+?>
