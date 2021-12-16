@@ -1,0 +1,34 @@
+1. The wellcome window is displayed first
+2. The user selects either the manager,the customer or the worker
+
+switch(selection){
+    case customer :
+    -instantiate the customer class
+    -redirect to signup/login page
+    -after signup,take them to a customer screen
+    -render all the customer functions on the screen
+    -instantiate all the methods 
+
+    case worker :
+    -instantiate the worker class
+    -redirect to signup/login page
+    -after signup,take them to a worker screen
+    -render all the worker functions on the screen
+    -instantiate all the methods 
+
+    case manager:
+    -instantiate the manager class
+    -redirect to signup/login page
+    -after signup,take them to a manager screen
+    -render all the manager functions on the screen
+    -instantiate all the methods 
+
+}
+
+
+
+-Manager needs not to sign up,just logs in,we can hardcode his username and password in the database
+-For the workers and customers we create two tables in the database that will store their information when they sign up
+-The information will be used for logging in too
+-We can also hardcode the names and roles of teh workers in the database,casue we already have them in the question
+-Lemme create html templates to bring you all on board

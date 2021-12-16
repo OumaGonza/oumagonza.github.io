@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer</title>
+    <link rel="stylesheet" href="all.css">
+
+</head>
+<body>
+
+    <div class="" id="remove">
+        <h1>This is the customers page</h1>
+    <div class="login">
+        <p>Login in to perform customer tasks</p>
+        <label for="">Username</label>
+        <input type="text">
+        <label for="">Password</label>
+        <input type="password">
+        <button id="rem">Login</button>
+    </div>
+    <div class="signup">
+        <p>Havent yet signed up?sign up here then</p>
+        <label for="">Username</label>
+        <input type="text">
+
+        <label for="">Phone no</label>
+        <input type="text">
+
+        <label for="">Email Address</label>
+        <input type="text">
+
+        <label for="">Password</label>
+        <input type="text">
+
+        <button id="rem2">Signup</button>
+    </div> 
+    </div>    
+     
+
+    <div class="show" id="show" style="display: none;">
+        <h1>Wellcome to the customers page</h1>
+        <h3>The following happens in the customer class</h3>
+        <ul>
+            <li>Makes an order</li>
+            <li>Receives an invoice</li>
+        </ul>
+
+        <h4>Happy Sevice</h4>
+
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            //display none
+            document.querySelector('#rem').onclick = function(){
+                document.querySelector('#remove').style.display = 'none';
+                document.querySelector('#show').style.display = 'block';
+            }
+
+            document.querySelector('#rem2').onclick = function(){
+                document.querySelector('#remove').style.display = 'none';
+                document.querySelector('#show').style.display = 'block';
+            }
+        }); 
+    </script>
+</body>
+</html>

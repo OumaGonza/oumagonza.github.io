@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="813.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.threefx.LoginController">
+   <children>
+      <ImageView fx:id="l_choice" fitHeight="556.0" fitWidth="813.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true" />
+      <CubicCurve controlX1="-91.0" controlX2="567.97021484375" controlY1="-124.468994140625" controlY2="285.0" endX="656.0" endY="-4.02728271484375" fill="DODGERBLUE" layoutX="157.0" layoutY="468.0" startX="-157.0" startY="88.0" stroke="BLACK" />
+      <Polygon fill="DODGERBLUE" layoutX="606.0" layoutY="177.0" points="205.97021484375, -177.0, 208.1240234375, 285.8487548828125, -272.0, -177.0" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Polyline fill="CHARTREUSE" layoutX="649.0" layoutY="97.0" opacity="0.46" points="-50.0, -68.45989990234375, 123.0, -41.45989990234375, 85.0, 108.54010009765625, 91.0, 108.54010009765625" strokeType="INSIDE" style="-fx-fill: #7723d8;" />
+      <Polyline fill="CHARTREUSE" layoutX="762.0" layoutY="338.0" opacity="0.58" points="-104.140625, -40.0, 50.0, -40.0, 0.0, 60.0, 0.0, -18.45989990234375" strokeType="INSIDE" style="-fx-fill: #7723d8;" />
+      <Polyline fill="CHARTREUSE" layoutX="714.0" layoutY="217.0" opacity="0.48" points="-165.0, -13.45989990234375, -281.0, -125.45989990234375, 4.0, 76.54010009765625, 97.97021484375, 4.270050048828125" strokeType="INSIDE" style="-fx-fill: #7723d8;" />
+      <Polyline fill="CHARTREUSE" layoutX="762.0" layoutY="40.0" opacity="0.06" points="-189.014892578125, -40.0, 50.0, -40.0, 50.0, 137.54010009765625, 8.0, -7.45989990234375" strokeType="INSIDE" style="-fx-fill: #7723d8;" />
+      <Polyline fill="CHARTREUSE" layoutX="484.0" layoutY="43.0" opacity="0.64" points="-148.0, -44.0, 40.0, -44.0, 215.0, 155.54010009765625, -55.0, 42.54010009765625" strokeType="INSIDE" style="-fx-fill: #7723d8;" />
+      <Pane fx:id="pane_login" layoutX="16.0" layoutY="146.0" prefHeight="361.0" prefWidth="557.0">
+         <children>
+            <Button fx:id="l_btn_login" layoutX="315.0" layoutY="299.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="102.0" style="-fx-background-color: DODGERBLUE;" text="Login" textFill="WHITE" />
+            <Label layoutX="38.0" layoutY="160.0" prefHeight="35.0" prefWidth="285.0" text="Password" textFill="#fff6f6">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="36.0" layoutY="83.0" prefHeight="35.0" prefWidth="271.0" text="Username" textFill="#f8f5f5">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="l_password" layoutX="35.0" layoutY="200.0" prefHeight="35.0" prefWidth="293.0" promptText="password" />
+            <Hyperlink fx:id="l_forgot_password" layoutX="209.0" layoutY="262.0" onAction="#forgotpassword" prefHeight="24.0" prefWidth="123.0" text="Forgot Password?" />
+            <TextField fx:id="l_username" layoutX="36.0" layoutY="118.0" prefHeight="35.0" prefWidth="293.0" promptText="username" />
+            <Text fx:id="l_error" fill="#c92525" layoutX="74.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="270.99999999999994">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="l_type" layoutX="358.0" layoutY="59.0" prefWidth="150.0" promptText="choose option" />
+         </children>
+      </Pane>
+      <Label layoutX="407.0" layoutY="37.0" prefHeight="59.0" prefWidth="402.0" text="Welcome to EggFarm LTD" textFill="#fffafa">
+         <font>
+            <Font name="System Bold Italic" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="152.0" prefHeight="94.0" prefWidth="214.0" text="Here your needs are our top and most priority as we bring new life to your happy years" textFill="#fffefe" wrapText="true">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <HBox layoutX="32.0" layoutY="79.0" prefHeight="68.0" prefWidth="355.0">
+         <children>
+            <Button fx:id="btnlogin" mnemonicParsing="false" onAction="#loginPaneShow" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #0e4816;" text="Login" textFill="#e8e8e8">
+               <HBox.margin>
+                  <Insets bottom="7.0" left="15.0" right="15.0" top="7.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_signup" mnemonicParsing="false" onAction="#signUpPaneShow" prefHeight="56.0" prefWidth="149.0" style="-fx-background-color: #0b3610;" text="Sign Up" textFill="#e8e8e8">
+               <HBox.margin>
+                  <Insets bottom="7.0" left="17.0" right="17.0" top="7.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="pane_signup" layoutX="23.0" layoutY="163.0" prefHeight="335.0" prefWidth="461.0" visible="false">
+         <children>
+            <TextField fx:id="si_username" layoutX="30.0" layoutY="84.0" prefHeight="35.0" prefWidth="402.0" promptText="username" />
+            <TextField fx:id="si_email" layoutX="30.0" layoutY="149.0" prefHeight="35.0" prefWidth="402.0" promptText="email" />
+            <PasswordField fx:id="si_password" layoutX="29.0" layoutY="213.0" prefHeight="35.0" prefWidth="402.0" promptText="password" />
+            <Button fx:id="s_signUp" layoutX="264.0" layoutY="276.0" mnemonicParsing="false" onAction="#add_user" prefHeight="35.0" prefWidth="166.0" style="-fx-background-color: #092c0d;" text="signup" textFill="#e1dcdc">
+               <font>
+                  <Font size="17.0" />
+               </font></Button>
+            <ComboBox fx:id="si_choice" layoutX="220.0" layoutY="18.0" prefHeight="35.0" prefWidth="214.0" promptText="choose type" />
+            <Text fx:id="si_errortxt" fill="RED" layoutX="16.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="197.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
