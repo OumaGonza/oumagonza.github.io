@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\begin{document}
+
+\section*{Proof: For Every DFA \(A\), There Exists a Regular Expression \(R\) such that \(L(R) = L(A)\)}
+
+Let \(A = (Q, \Sigma, \delta, q_0, F)\) be a DFA with:
+\begin{itemize}
+    \item \(Q\) as the set of states,
+    \item \(\Sigma\) as the alphabet,
+    \item \(\delta\) as the transition function,
+    \item \(q_0\) as the initial state, and
+    \item \(F\) as the set of final states.
+\end{itemize}
+
+We will construct a regular expression \(R\) such that \(L(R) = L(A)\).
+
+Define \(R\) recursively for each pair of states \(p, q \in Q\) as follows:
+\[
+R_{pq}^{(k)} =
+\begin{cases}
+    \epsilon & \text{if } k = 0 \text{ and } p = q, \\
+    \delta(p, q) & \text{if } k = 0 \text{ and } p \neq q, \\
+    \delta(p, q) + \delta(p, k) \cdot (R_{kk}^{(k-1)})^* \cdot \delta(k, q) & \text{if } k > 0,
+\end{cases}
+\]
+
+where \(k\) ranges over the set of states \(Q\).
+
+Now, let \(R\) be the regular expression \(R_{q_0F}^{(|Q|)}\), where \(|Q|\) is the number of states in the DFA.
+
+The regular expression \(R\) is constructed in such a way that \(L(R)\) corresponds to the language accepted by the DFA \(A\). Therefore, for every DFA \(A\), there exists a regular expression \(R\) such that \(L(R) = L(A)\).
+
+\end{document}
+
